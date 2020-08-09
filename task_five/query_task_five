@@ -1,0 +1,8 @@
+SELECT
+ SUM(seoTotal) AS seoTotal,
+ SUM(ppcTotal) AS ppcTotal,
+ SUM(otherTotal) AS otherTotal
+ FROM
+ marketing_costs
+ WHERE
+  IF(year = 2019, MONTH BETWEEN 4 AND 12 , IF(year = 2020, MONTH BETWEEN 1 AND 6, null));

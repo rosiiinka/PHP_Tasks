@@ -1,0 +1,5 @@
+CREATE INDEX ix_tracking_number
+ON scan_shipped_orders(tracking_number);
+
+SELECT * FROM scan_shipped_orders USE INDEX (ix_tracking_number)
+WHERE tracking_number = '1Z31629V0395461168';
